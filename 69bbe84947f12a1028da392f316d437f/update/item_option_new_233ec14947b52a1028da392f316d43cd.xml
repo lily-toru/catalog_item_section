@@ -26,7 +26,7 @@
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
-        <hidden>false</hidden>
+        <hidden>true</hidden>
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
@@ -79,14 +79,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-05-27 04:56:17</sys_created_on>
         <sys_id>233ec14947b52a1028da392f316d43cd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Current section</sys_name>
         <sys_package display_value="Catalog Item-2" source="x_1755799_catalog">69bbe84947f12a1028da392f316d437f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Catalog Item-2">69bbe84947f12a1028da392f316d437f</sys_scope>
         <sys_update_name>item_option_new_233ec14947b52a1028da392f316d43cd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-05-27 07:23:41</sys_updated_on>
+        <sys_updated_on>2025-05-27 07:47:49</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
