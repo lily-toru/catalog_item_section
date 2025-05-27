@@ -65,21 +65,21 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-05-27 02:32:31</sys_created_on>
         <sys_id>0f7d644d47f12a1028da392f316d43e2</sys_id>
-        <sys_mod_count>49</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_name>Catalog Item2</sys_name>
         <sys_package display_value="Catalog Item-2" source="x_1755799_catalog">69bbe84947f12a1028da392f316d437f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Catalog Item-2">69bbe84947f12a1028da392f316d437f</sys_scope>
         <sys_update_name>sc_cat_item_0f7d644d47f12a1028da392f316d43e2</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-05-27 07:24:08</sys_updated_on>
+        <sys_updated_on>2025-05-27 07:29:57</sys_updated_on>
         <taxonomy_topic/>
         <template/>
         <template_manager_roles/>
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>48</version>
+        <version>49</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
