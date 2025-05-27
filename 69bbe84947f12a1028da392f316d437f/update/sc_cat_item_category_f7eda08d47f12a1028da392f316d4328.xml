@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
     <sc_cat_item_category action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="Catalog Item-2">0f7d644d47f12a1028da392f316d43e2</sc_cat_item>
+        <sc_cat_item display_value="Catalog Item2">0f7d644d47f12a1028da392f316d43e2</sc_cat_item>
         <sc_category display_value="Can We Help You?">e15706fc0a0a0aa7007fc21e1ab70c2f</sc_category>
         <sys_class_name>sc_cat_item_category</sys_class_name>
         <sys_created_by>admin</sys_created_by>

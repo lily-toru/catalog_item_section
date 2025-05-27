@@ -2,7 +2,7 @@
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
         <attributes/>
-        <cat_item display_value="Catalog Item-2">0f7d644d47f12a1028da392f316d43e2</cat_item>
+        <cat_item display_value="Catalog Item2">0f7d644d47f12a1028da392f316d43e2</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
         <choice_field/>
