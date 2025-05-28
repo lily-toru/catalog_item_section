@@ -11,36 +11,35 @@
         // check the gform
         var gform = $scope.page && $scope.page.g_form;
         if (gform) {
-            // 确保val为有效数值且大于0，否则使用默认值1
-            val = parseInt(val) > 0? parseInt(val) : 1; 
+            val = parseInt(val) > 0 ? parseInt(val) : 1; 
             gform.setValue('current_section', val);
             c.currentSection = val;
         }
 
-        // 使用querySelectorAll获取元素，返回的是真正的数组，便于操作
-        var list = document.querySelectorAll('.btn - primary'); 
-        list.forEach(function(element) {
-            element.classList.remove('btn - primary');
+        // Remove the active state from all buttons
+        var buttons = document.querySelectorAll('.btn-breadcrumb .btn'); 
+        buttons.forEach(function(button) {
+            button.classList.remove('active');
         });
 
-        if (val > 0) {
-            if (e && e.currentTarget) {
-                e.currentTarget.classList.remove('btn - default');
-                e.currentTarget.classList.add('btn - primary');
-            }
-        } else {
-            if (e && e.currentTarget) {
-                var nextSibling = e.currentTarget.nextElementSibling;
-                if (nextSibling) {
-                    nextSibling.classList.add('btn - primary');
-                }
-                e.currentTarget.classList.add('btn - default');
-            }
+        // Add the active state to the currently clicked button
+        if (e && e.currentTarget) {
+            e.currentTarget.classList.add('active');
         }
     };
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>.btn-breadcrumb .btn:not(:last-child):after {
+        <css>.btn-breadcrumb .btn {
+  padding: 6px 12px 6px 24px;
+  font-size: 16px;
+  position: relative;
+  background-color: #fff; /* Default background color */
+  border-color: #ccc;
+  color: #333;
+  transition: background-color 0.3s; /* Smooth transition effect */
+}
+
+.btn-breadcrumb .btn:not(:last-child):after {
   content: " ";
   display: block;
   width: 0;
@@ -53,7 +52,9 @@
   margin-top: -17px;
   left: 100%;
   z-index: 3;
+  transition: border-left-color 0.3s;
 }
+
 .btn-breadcrumb .btn:not(:last-child):before {
   content: " ";
   display: block;
@@ -67,41 +68,45 @@
   margin-top: -17px;
   margin-left: 1px;
   left: 100%;
-  z-index: 3;
+  z-index: 2;
 }
 
-/** The Spacing **/
-.btn-breadcrumb .btn {
-  padding:6px 12px 6px 24px;
-  font-size:16px;
-}
 .btn-breadcrumb .btn:first-child {
-  padding:6px 6px 6px 10px;
+  padding: 6px 6px 6px 10px;
 }
+
 .btn-breadcrumb .btn:last-child {
-  padding:6px 18px 6px 24px;
+  padding: 6px 18px 6px 24px;
 }
 
-/** Default button **/
-.btn-breadcrumb .btn.btn-default:not(:last-child):after {
-  border-left: 10px solid #fff;
-}
-.btn-breadcrumb .btn.btn-default:not(:last-child):before {
-  border-left: 10px solid #ccc;
-}
-.btn-breadcrumb .btn.btn-default:hover:not(:last-child):after {
-  border-left: 10px solid #ebebeb;
-}
-.btn-breadcrumb .btn.btn-default:hover:not(:last-child):before {
-  border-left: 10px solid #adadad;
-}
-
+/* Active state button */
 .btn-breadcrumb .btn.active {
-    background-color: #3300ff;
-    color: white;
+  background-color: #3300ff;
+  color: white;
+  border-color: #3300ff;
 }
+
 .btn-breadcrumb .btn.active:not(:last-child):after {
-    border-left: 10px solid #3300ff;
+  border-left-color: #3300ff;
+}
+
+/* Mouse hover effect */
+.btn-breadcrumb .btn:hover {
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.btn-breadcrumb .btn:hover:not(:last-child):after {
+  border-left-color: #e6e6e6;
+}
+
+.btn-breadcrumb .btn.active ~ .btn {
+  background-color: #fff;
+  color: #333;
+}
+
+.btn-breadcrumb .btn.active ~ .btn:not(:last-child):after {
+  border-left-color: #fff;
 }</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
@@ -122,14 +127,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-05-27 02:53:47</sys_created_on>
         <sys_id>aa52304147352a1028da392f316d439c</sys_id>
-        <sys_mod_count>51</sys_mod_count>
+        <sys_mod_count>54</sys_mod_count>
         <sys_name>catalog item2 widget</sys_name>
         <sys_package display_value="Catalog Item-2" source="x_1755799_catalog">69bbe84947f12a1028da392f316d437f</sys_package>
         <sys_policy/>
         <sys_scope display_value="Catalog Item-2">69bbe84947f12a1028da392f316d437f</sys_scope>
         <sys_update_name>sp_widget_aa52304147352a1028da392f316d439c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-05-27 09:04:06</sys_updated_on>
+        <sys_updated_on>2025-05-27 14:06:25</sys_updated_on>
         <template><![CDATA[<div>
     <div class="btn-group btn-breadcrumb">
         <a ng-click="c.setStep(0, $event)" class="btn btn-default"><i class="glyphicon glyphicon-home"></i></a>
